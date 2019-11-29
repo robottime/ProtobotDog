@@ -1,0 +1,31 @@
+{
+    "terminal.integrated.env.windows": {
+        "PATH": "C:\\Users\\zhaos\\.platformio\\penv\\Scripts;C:\\Users\\zhaos\\.platformio\\penv;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\PuTTY\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\zhaos\\AppData\\Local\\Programs\\Python\\Python36;C:\\Users\\zhaos\\AppData\\Local\\Programs\\Python\\Python36\\Scripts;C:\\Users\\zhaos\\scoop\\shims;C:\\Users\\zhaos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\MinGW\\bin;C:\\Users\\zhaos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\zhaos\\AppData\\Local\\Pandoc\\;C:\\FFMPEG\\bin;C:\\OpenMP\\Library\\bin;C:\\Users\\zhaos\\AppData\\Local\\Android\\Sdk\\platform-tools;D:\\Softwares\\MongoDB\\Server\\4.0\\bin;C:\\Users\\zhaos\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\zhaos\\AppData\\Roaming\\npm;C:\\libjpeg-turbo64\\bin;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\PuTTY\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\zhaos\\AppData\\Local\\Programs\\Python\\Python36;C:\\Users\\zhaos\\AppData\\Local\\Programs\\Python\\Python36\\Scripts;C:\\Users\\zhaos\\scoop\\shims;C:\\Users\\zhaos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\MinGW\\bin;C:\\Users\\zhaos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\zhaos\\AppData\\Local\\Pandoc\\;C:\\FFMPEG\\bin;C:\\OpenMP\\Library\\bin;C:\\Users\\zhaos\\AppData\\Local\\Android\\Sdk\\platform-tools;D:\\Softwares\\MongoDB\\Server\\4.0\\bin;C:\\Users\\zhaos\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\zhaos\\AppData\\Roaming\\npm;C:\\libjpeg-turbo64\\bin",
+        "PLATFORMIO_CALLER": "vscode"
+    },
+    "python.autoComplete.extraPaths": [
+        "C:/Users/zhaos/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.4/microExamples/code-completion"
+    ],
+    "python.linting.pylintArgs": [
+        "--init-hook",
+        "import sys; sys.path.append('C:/Users/zhaos/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.4/microExamples/code-completion')"
+    ],
+    "MicroPython.executeButton": [
+        {
+            "text": "▶",
+            "tooltip": "运行",
+            "alignment": "left",
+            "command": "extension.executeFile",
+            "priority": 3.5
+        }
+    ],
+    "MicroPython.syncButton": [
+        {
+            "text": "$(sync)",
+            "tooltip": "同步",
+            "alignment": "left",
+            "command": "extension.execute",
+            "priority": 4
+        }
+    ]
+}
