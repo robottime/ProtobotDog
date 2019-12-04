@@ -37,7 +37,6 @@ void Switch::setup()
 void Switch::read() {
   if(!digitalRead(SWITCH_1_PIN)) {
     if(_pos != 1) {
-      DEBUG_SERIAL.println("pos1");
       _pos = 1;
       switchCallback1();
     }
@@ -45,7 +44,6 @@ void Switch::read() {
   else if (!digitalRead(SWITCH_2_PIN))
   {
     if (_pos != 2) {
-      DEBUG_SERIAL.println("pos2");
       _pos = 2;
       switchCallback2();
     }
@@ -53,7 +51,6 @@ void Switch::read() {
   else if (!digitalRead(SWITCH_3_PIN))
   {
     if (_pos != 3) {
-      DEBUG_SERIAL.println("pos3");
       _pos = 3;
       switchCallback3();
     }
@@ -61,7 +58,6 @@ void Switch::read() {
   else {
     if (digitalRead(SWITCH_1_PIN) && digitalRead(SWITCH_2_PIN) && digitalRead(SWITCH_3_PIN))
     {
-      DEBUG_SERIAL.println("pos0");
       _pos = 0;
     }
   }

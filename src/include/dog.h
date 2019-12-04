@@ -63,14 +63,14 @@ class Dog : public Device {
       if (_calibrated) return;
       _calibrated = 1;
       for (int axis = 0; axis < 2; axis++) {
-        // leg1.axisCalibrate(axis);
-        // delay(100);
-        // leg2.axisCalibrate(axis);
-        // delay(100);
+        leg1.axisCalibrate(axis);
+        delay(100);
+        leg2.axisCalibrate(axis);
+        delay(100);
         leg3.axisCalibrate(axis);
         delay(100);
-        // leg4.axisCalibrate(axis);
-        // delay(100);
+        leg4.axisCalibrate(axis);
+        delay(100);
       }
       return;
     }

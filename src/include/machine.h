@@ -41,7 +41,7 @@ void setup_machines() {
     GYRO_SERIAL.begin(115200);
 
     while (!DEBUG_SERIAL) {}
-    delay(200);
+    delay(500);
 }
 
 #endif

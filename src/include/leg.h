@@ -203,6 +203,7 @@ class Leg : public Device {
   }
   void pos(float x, float y) {
     float alpha, beta;
+    x = _dir ? x : -x;
     if(!cartesianToAlphaBeta(x, y, alpha, beta, _dir)) {
       write(radToCount(alpha), radToCount(beta));
       // DEBUG_SERIAL << _name << ": " <<  radToCount(alpha) << ", " << radToCount(beta) << '\n';
@@ -348,8 +349,8 @@ class Leg : public Device {
 };
 
 Leg leg1(&serial_leg1, "leg1",1);
-Leg leg2(&serial_leg2, "leg2",1);
-Leg leg3(&serial_leg3, "leg3",1);
+Leg leg2(&serial_leg2, "leg2",0);
+Leg leg3(&serial_leg3, "leg3",0);
 Leg leg4(&serial_leg4, "leg4",1);
 
 #endif
