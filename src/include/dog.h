@@ -33,9 +33,13 @@ class Dog : public Device {
       // }
       // DEBUG_SERIAL.println();
       leg1.pos(x[0], y[0]);
+      delay(3);
       leg2.pos(x[1], y[1]);
+      delay(3);
       leg3.pos(x[2], y[2]);
+      delay(3);
       leg4.pos(x[3], y[3]);
+      delay(3);
       _t_prev = millis();
     }
   }

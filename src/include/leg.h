@@ -23,10 +23,11 @@ struct legParam
   float calibration_current;
   float inverter_temp_limit_upper;
   int cpr;
+  float requested_current_range;
 };
 
 legParam kLarmCfg = {
-    .vel_limit = 100000,
+    .vel_limit = 50000,
     .vel_limit_tolerance = 2,
     .pos_gain = 18,                // 18
     .vel_gain = 0.0002,            // 0.0002
@@ -38,10 +39,11 @@ legParam kLarmCfg = {
     .calibration_current = 10,
     .inverter_temp_limit_upper = 10000,
     .cpr = 4000,
+    .requested_current_range = 90,
 };
 
 legParam kUarmCfg = {
-    .vel_limit = 100000,
+    .vel_limit = 50000,
     .vel_limit_tolerance = 2,
     .pos_gain = 18,
     .vel_gain = 0.0002,
@@ -53,6 +55,7 @@ legParam kUarmCfg = {
     .calibration_current = 10,
     .inverter_temp_limit_upper = 10000,
     .cpr = 4000,
+    .requested_current_range = 90
 };
 
 class Leg : public Device {
@@ -224,7 +227,7 @@ class Leg : public Device {
   void axisWrite(int axis, float pos) {
     if (!validAxis(axis)) return;
     _odrive->SetPosition(axis, pos);
-    delay(5);
+    delay(1);
   }
   void axisMiddle(int axis, float offset) {
     if (!validAxis(axis)) return;
@@ -282,8 +285,9 @@ class Leg : public Device {
     delay(10);
     *_serial << "w axis" << axis << ".motor.config.inverter_temp_limit_upper " << config.inverter_temp_limit_upper << '\n';
     delay(10);
-    
     *_serial << "w axis" << axis << ".motor.config.calibration_current " << config.calibration_current << '\n';
+    delay(10);
+    *_serial << "w axis" << axis << ".motor.config.requested_current_range " << config.requested_current_range << '\n';
     delay(10);
     *_serial << "w axis" << axis << ".encoder.config.cpr " << config.cpr << '\n';
     delay(10);

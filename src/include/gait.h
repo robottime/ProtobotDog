@@ -31,19 +31,19 @@ struct gaitParam {
 //     .flight_percent = 0.5};
 
 gaitParam forwardGait = {
-    .x_origin = -0.4,
+    .x_origin = -0.3,
     .y_origin = 1.5,
     .amp = -0.4,
     .half_cycle = 0.5,
-    .period = 600, // 1000
+    .period = 1000, // 1000 600
     .flight_percent = 0.5};
 
 gaitParam forwardGait2 = {
-    .x_origin = -0.9,
+    .x_origin = -0.5,
     .y_origin = 1.5,
     .amp = -0.4,
     .half_cycle = 0.5,
-    .period = 600,
+    .period = 1000,
     .flight_percent = 0.5};
 
 gaitParam backwardGait = {
