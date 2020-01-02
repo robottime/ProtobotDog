@@ -7,6 +7,7 @@
 #include "switch.h"
 #include "leg.h"
 #include "dog.h"
+#include "zen.h"
 
 enum device_t
 {
@@ -15,6 +16,7 @@ enum device_t
   LEG2,
   LEG3,
   LEG4,
+  ZEN,
   GYRO,
   DEVICE_NUM,
 };
@@ -27,6 +29,7 @@ namespace robot {
     &leg2,
     &leg3,
     &leg4,
+    &zen,
     NULL,
   };
   char *device_names[DEVICE_NUM] = {
@@ -35,6 +38,7 @@ namespace robot {
     "leg2",
     "leg3",
     "leg4",
+    "zen",
     "gyro",
   };
 
@@ -45,13 +49,17 @@ namespace robot {
       return;
     }
     devices[cur_device] -> onCmd(arg_cnt, args);
-    delay(80);
-    cli.setPath(devices[cur_device]->getName());
+    if(cur_device != ZEN) {
+      delay(80);
+      cli.setPath(devices[cur_device]->getName());
+      cli.prompt();
+    }
   }
 
   void changeDev(int arg_cnt, char **args) {
     if (arg_cnt < 1) {
       DEBUG_SERIAL.println("Invalid input, type \"help\" for more information.");
+      cli.prompt();
       return;
     }
     for (device_t d = device_t(0); d < DEVICE_NUM; d = device_t(d + 1)) {
@@ -59,10 +67,12 @@ namespace robot {
         cur_device = d;
         if(devices[d]) cli.setPath(devices[d]->getName());
         else cli.setPath(args[1]);
+        cli.prompt();
         return;
       }
     }
     DEBUG_SERIAL.println("Invalid input, type \"help\" for more information.");
+    cli.prompt();
   }
 
   void help(int arg_cnt, char **args) {
@@ -76,6 +86,7 @@ namespace robot {
       return;
     }
     devices[cur_device]->cliHelp();
+    cli.prompt();
   }
 
   void setup()

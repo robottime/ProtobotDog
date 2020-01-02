@@ -54,6 +54,13 @@ class Cli {
   void setPath(char *path) {
     strcpy(_path, path);
   }
+
+  void prompt() {
+    _serial->flush();
+    _serial->print(_path);
+    _serial->print(" >> ");
+  }
+
  private:
   Stream *_serial;
   char _msg[MAX_MSG_SIZE];
@@ -63,12 +70,6 @@ class Cli {
 
   char _path[MAX_PATH_LEN];
   const char _err_msg[24] = "Command not recognized."; 
-
-  void prompt() {
-    _serial->flush();
-    _serial->print(_path);
-    _serial->print(" >> ");
-  }
 
   void parse(char *cmd) {
     uint8_t argc, i = 0;
@@ -94,7 +95,6 @@ class Cli {
       if (!strcmp(argv[0], cmd_entry->cmd))
       {
         cmd_entry->func(argc, argv);
-        prompt();
         return;
       }
     }

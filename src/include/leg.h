@@ -212,6 +212,14 @@ class Leg : public Device {
       // DEBUG_SERIAL << _name << ": " <<  radToCount(alpha) << ", " << radToCount(beta) << '\n';
     }
   }
+
+  void zenWrite(int axis,float ang)
+  {
+    if (!validAxis(axis)) return;
+    if( (axis==0)&&((ang>M_PI/2)||(ang<-M_PI/2)) ) return;
+    axisWrite(axis, _middle[axis] + radToCount(ang));
+  }
+
   void setDir(bool dir) {
     _dir = dir;
   }

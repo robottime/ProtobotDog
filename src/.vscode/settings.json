@@ -4,11 +4,11 @@
         "PLATFORMIO_CALLER": "vscode"
     },
     "python.autoComplete.extraPaths": [
-        "C:/Users/zhaos/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.4/microExamples/code-completion"
+        "C:/Users/zhaos/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.5/microExamples/code-completion"
     ],
     "python.linting.pylintArgs": [
         "--init-hook",
-        "import sys; sys.path.append('C:/Users/zhaos/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.4/microExamples/code-completion')"
+        "import sys; sys.path.append('C:/Users/zhaos/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.5/microExamples/code-completion')"
     ],
     "MicroPython.executeButton": [
         {

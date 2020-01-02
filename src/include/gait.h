@@ -31,20 +31,20 @@ struct gaitParam {
 //     .flight_percent = 0.5};
 
 gaitParam forwardGait = {
-    .x_origin = -0.3,
-    .y_origin = 1.5,
-    .amp = -0.4,
+    .x_origin = -0.3, // -0.3
+    .y_origin = 1.6, // 1.5
+    .amp = -0.5, // -0.4
     .half_cycle = 0.5,
-    .period = 1000, // 1000 600
-    .flight_percent = 0.5};
+    .period = 1200, // 1000 600
+    .flight_percent = 0.35};
 
 gaitParam forwardGait2 = {
-    .x_origin = -0.5,
-    .y_origin = 1.5,
-    .amp = -0.4,
+    .x_origin = -0.6,
+    .y_origin = 1.6,
+    .amp = -0.5,
     .half_cycle = 0.5,
-    .period = 1000,
-    .flight_percent = 0.5};
+    .period = 1200,
+    .flight_percent = 0.35};
 
 gaitParam backwardGait = {
     .x_origin = 0.5,
@@ -64,7 +64,7 @@ gaitParam backwardGait2 = {
     .flight_percent = 0.6};
 
 gaitParam stepGait = {
-    .x_origin = -0.2,
+    .x_origin = -0.3, // -0.2
     .y_origin = 1.6, 
     .amp = -0.5,       // -0.5 -1
     .half_cycle = 0.01,
